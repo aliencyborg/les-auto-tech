@@ -7,7 +7,7 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
     fastboot: {
-      hostWhitelist: ['/^(\w+\.)?lat\.aliencyb\.org$/', /^localhost:\d+$/]
+      hostWhitelist: ['lat.aliencyb.org', /^localhost:\d+$/]
     },
     EmberENV: {
       FEATURES: {

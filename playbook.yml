@@ -41,9 +41,9 @@
         name: les-auto-tech-stage
         state: started
         env:
-          LETSENCRYPT_HOST: 'lat.aliencyb.org,www.lat.aliencyb.org'
+          LETSENCRYPT_HOST: 'lat.aliencyb.org'
           PORT: '80'
-          VIRTUAL_HOST: 'lat.aliencyb.org,www.lat.aliencyb.org'
+          VIRTUAL_HOST: 'lat.aliencyb.org'
       tags: stage
 
     ## PRODUCTION ##
