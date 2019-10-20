@@ -1,0 +1,82 @@
+---
+- name: web application deploy
+  hosts: west
+  remote_user: hank
+  vars:
+    workdir: /home/hank/code/src/github.com/aliencyborg/les-auto-tech
+  tasks:
+    - name: ensure code/src/github.com/aliencyborg directory is present
+      file:
+        path: /home/hank/code/src/github.com/aliencyborg
+        state: directory
+      tags: [ prod, stage ]
+
+    ## STAGE ##
+
+    - name: clone or update les-auto-tech repository (stage)
+      git:
+        accept_hostkey: yes
+        dest: "{{ workdir }}"
+        key_file: /home/hank/.ssh/id_rsa
+        repo: 'git@github.com:aliencyborg/les-auto-tech.git'
+        update: yes
+        version: stage
+      tags: stage
+
+    - name: build docker image (stage)
+      docker_image:
+        force_source: yes
+        name: les-auto-tech
+        source: build
+        tag: stage
+        build:
+          path: "{{ workdir }}"
+          pull: no
+      tags: stage
+
+    - name: run docker container (stage)
+      docker_container:
+        expose: 80
+        image: les-auto-tech:stage
+        name: les-auto-tech-stage
+        state: started
+        env:
+          LETSENCRYPT_HOST: 'lat.aliencyb.org,www.lat.aliencyb.org'
+          PORT: '80'
+          VIRTUAL_HOST: 'lat.aliencyb.org,www.lat.aliencyb.org'
+      tags: stage
+
+    ## PRODUCTION ##
+
+    - name: clone or update les-auto-tech repository (prod)
+      git:
+        accept_hostkey: yes
+        dest: "{{ workdir }}"
+        key_file: /home/hank/.ssh/id_rsa
+        repo: 'git@github.com:aliencyborg/les-auto-tech.git'
+        update: yes
+        version: prod
+      tags: prod
+
+    - name: build docker image (prod)
+      docker_image:
+        force_source: yes
+        name: les-auto-tech
+        source: build
+        tag: prod
+        build:
+          path: "{{ workdir }}"
+          pull: no
+      tags: prod
+
+    - name: run docker container (prod)
+      docker_container:
+        expose: 80
+        image: les-auto-tech:prod
+        name: les-auto-tech
+        state: started
+        env:
+          LETSENCRYPT_HOST: 'lesautotech.com,www.lesautotech.com'
+          PORT: '80'
+          VIRTUAL_HOST: 'lesautotech.com,www.lesautotech.com'
+      tags: prod
