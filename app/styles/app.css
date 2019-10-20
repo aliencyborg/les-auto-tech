@@ -1,0 +1,10 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+@import "components.css";
+
+@import "tailwindcss/utilities";
+@import "utilities.css";
+
+/* Get my fonts */
+@import url("https://use.typekit.net/zev5efa.css");
