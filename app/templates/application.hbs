@@ -3,11 +3,12 @@
     <div class="bg-red-800 text-white pl-4">
       Serving our customers for over {{this.years}} years.
     </div>
+
     <div class="flex">
       <div class="bg-gray-500 flex-1 text-center flex flex-col">
         <h1 class="font-logo text-blue-800 text-lg sm:text-2xl md:text-3xl
           lg:text-4xl xl:text-6xl tracking-tight py-3">
-          LE'S AUTO TECH
+          <LinkTo @route="index">LE'S AUTO TECH</LinkTo>
         </h1>
         <div class="bg-blue-800 text-white leading-loose sm:text-xl
           flex-grow flex flex-wrap content-around">
@@ -31,7 +32,10 @@
         </span>
       </div>
     </div>
+
     <div class="bg-deep-blue h-6 border-white border-solid border-t-2"></div>
+
+    <NavBar />
 
     {{outlet}}
 
