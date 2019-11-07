@@ -1,11 +1,13 @@
-{{#if @route}}
-  <LinkTo @route={{@route}}>
+<div class="py-1">
+  {{#if @route}}
+    <LinkTo @route={{@route}}>
+      <button class="btn btn-blue {{this.activeClass}}">
+        {{yield}}
+      </button>
+    </LinkTo>
+  {{else}}
     <button class="btn btn-blue {{this.activeClass}}">
       {{yield}}
     </button>
-  </LinkTo>
-{{else}}
-  <button class="btn btn-blue {{this.activeClass}}">
-    {{yield}}
-  </button>
-{{/if}}
+  {{/if}}
+</div>
