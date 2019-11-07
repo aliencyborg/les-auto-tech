@@ -1,9 +1,12 @@
-<ul class="flex">
-  <NavButton><LinkTo @route="about">About Us</LinkTo></NavButton>
-  <NavButton><LinkTo @route="services">Services</LinkTo></NavButton>
+<ul class="flex flex-wrap justify-around py-3 font-mono">
+  <NavButton @route="about">ABOUT US</NavButton>
+  <NavButton @route="services">SERVICES</NavButton>
   <NavButton>
-    <a href="https://goo.gl/maps/AiBRVkzyqi12CE2K6">Directions</a>
+    <a href="https://goo.gl/maps/AiBRVkzyqi12CE2K6" target="_blank"
+      rel="noopener">
+      DIRECTIONS
+    </a>
   </NavButton>
-  <NavButton><LinkTo @route="specials">Specials</LinkTo></NavButton>
-  <NavButton><LinkTo @route="contact">Contact Us</LinkTo></NavButton>
+  <NavButton @route="specials">SPECIALS</NavButton>
+  <NavButton @route="contact">CONTACT US</NavButton>
 </ul>
