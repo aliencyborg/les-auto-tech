@@ -1,20 +1,34 @@
 <div class="bg-gray-500 min-h-screen">
   <div class="container mx-auto border-white border-solid border-2">
-    <div class="bg-red-800 text-white pl-4">Serving our customers for over {{this.years}} years.</div>
+    <div class="bg-red-800 text-white pl-4">
+      Serving our customers for over {{this.years}} years.
+    </div>
     <div class="flex">
-      <div class="bg-gray-500 flex-1 text-center">
-        <h1 class="block font-logo text-blue-800 text-6xl tracking-tight">LE'S AUTO TECH</h1>
-        <div class="block bg-blue-800 text-white leading-loose text-xl">
-          <span class="pr-2"><a href="tel:651-222-2337">(651) 222-2337</a></span>
-          <span>Complete Auto Repairs</span>
-          <span class="font-bold pl-2">Foreign & Domestic</span>
+      <div class="bg-gray-500 flex-1 text-center flex flex-col">
+        <h1 class="font-logo text-blue-800 text-lg sm:text-2xl md:text-3xl
+          lg:text-4xl xl:text-6xl tracking-tight py-3">
+          LE'S AUTO TECH
+        </h1>
+        <div class="bg-blue-800 text-white leading-loose sm:text-xl
+          flex-grow flex flex-wrap content-around">
+          <span class="md:text-xl px-2 flex-grow">
+            <a href="tel:651-222-2337">(651) 222-2337</a>
+          </span>
+          <span class="px-2 flex-grow">Complete Auto Repairs</span>
+          <span class="flex-grow font-bold px-2">Foreign & Domestic</span>
         </div>
       </div>
-      <div class="bg-white flex-1 text-center py-4 text-blue-800">
-        <span class="block text-xl font-bold font-mono"><a href="tel:651-222-2337">651-222-2337</a></span>
-        <span class="block italic">An auto shop you can trust!!</span>
-        <span class="block text-red-700 font-serif text-xl">ASE Certified</span>
-        <span class="block italic">An auto shop you'll tell your friends about.</span>
+      <div class="bg-white flex-1 text-center py-4 text-blue-800 flex flex-col
+      justify-center">
+        <span class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl
+          font-bold font-mono">
+          <a href="tel:651-222-2337">651-222-2337</a>
+        </span>
+        <span class="italic">An auto shop you can trust!!</span>
+        <span class="text-red-700 font-serif sm:text-xl">ASE Certified</span>
+        <span class="italic">
+          An auto shop you'll tell your friends about.
+        </span>
       </div>
     </div>
 
