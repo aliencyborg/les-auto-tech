@@ -1,5 +1,7 @@
 FROM node:lts-alpine
 
+ARG API_HOST
+
 WORKDIR /usr/src/app
 
 RUN apk update
@@ -11,6 +13,6 @@ RUN npm ci --silent
 
 COPY . .
 
-RUN ember build --environment=production
+RUN API_HOST=$API_HOST ember build --environment=production
 
 CMD ["node", "/usr/src/app/fastboot-server.js"]
