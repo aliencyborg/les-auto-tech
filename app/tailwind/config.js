@@ -2,7 +2,11 @@
 
 module.exports = {
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'deep-blue': '#000099'
+      }
+    },
     fontFamily: {
       // Tailwind defaults:
       sans: [
