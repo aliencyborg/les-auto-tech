@@ -29,7 +29,8 @@ module.exports = {
       // My fonts
       base: 'acumen-pro, sans-serif',
       logo: 'cooper-black-std, serif',
-      serif: 'kepler-std, Times, serif'
+      serif: 'kepler-std, Times, serif',
+      modern: 'termina, sans-serif'
     }
   },
   variants: {},
