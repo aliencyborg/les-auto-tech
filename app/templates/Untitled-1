@@ -1,0 +1,26 @@
+{{outlet}}
+<!--grid home page layout. Should have top full width graphic taking up to 1/8 to 1/4 of page height. below
+want to have selection images of square buttons for service with drop down hover menus, Also put navagation to 
+other pages here. No Hamburger all visual navagation -->
+
+<!-- Full width column --> <!--logo goes here-->
+<div class="flex mb-4">
+  <div class="flex-1 bg-gray-500 h-12">
+  <img src=" link"></div>
+</div>
+
+<!--button cubes in grid layout -->
+
+<div class="px-2">
+  <div class="flex -mx-2">
+    <div class="w-1/3 px-2">
+      <div class="bg-gray-400 h-12"></div>
+    </div>
+    <div class="w-1/3 px-2">
+      <div class="bg-gray-500 h-12"></div>
+    </div>
+    <div class="w-1/3 px-2">
+      <div class="bg-gray-400 h-12"></div>
+    </div>
+  </div>
+</div>
