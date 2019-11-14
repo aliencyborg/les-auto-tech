@@ -1,92 +1,18 @@
-<div class="py-2 flex justify-center">
-  <h1 class="px-4 text-center text-4xl font-bold border-white border-2 w-2/3
-    bg-blue-600 hover:bg-blue 600 rounded-full px-4 ">
-    Give us a call! 651-222-2337
-  </h1>
-</div>
+<div class="bg-blue-200 text-center flex-1 p-4">
+  <h1>Contact</h1>
 
+  {{ outlet }}
 
-<p class="px-4 py-4 text-2xl text-left">
-  We do are best to answer the phones, but sometimes it gets busy, please
-  leave a detailed message, and phone number, or preferred method of contact,
-  and we will get back to you right away.
-</p>
-
-
-<div class="py-2 flex justify-center">
-  <h1 class="px-4 text-center text-4xl font-bold border-white border-2 w-2/3
-    bg-blue-600 rounded-full px-4 ">
-    Email us! lesautotech651@outlook.com
-  </h1>
-</div>
-
-
-
-<p class="px-4 py-4 text-2xl text-left">
-  Please send us an email. Describe the issue or service, of inquiry. Please
-  describe any sounds, or times you notice the problem. Also please include
-  Make, model, year, color and any other related description. And let us know
-  what best time and method of Contact.
-</p>
-
-<div class="py-2 flex justify-center">
-  <h1 class="px-4 text-center text-4xl font-bold border-white border-2 w-2/3
-    bg-blue-600 rounded-full px-4 ">
-    Or come on by!
-  </h1>
-</div>
-
-
-
-<div class="flex content-start">
-  <p class="px-4 py-4 text-2xl text-left font-bold">
-    Le's Auto Tech
-    <br>
-    468 University Avenue W.
-    <br>
-    St. Paul, MN 55103
-  </p>
-
-  <img class="w-1/2 h-1/2 px-4" src="images/mini_map.jpg" alt="Le's Auto Tech is
-    located near the Midway on University Avenue between Western & Dale
-    Streets">
-</div>
-
-<div class="py-2 font-bold flex justify-center">
-  <h1 class="px-4 text-center text-4xl font-bold border-white border-2 w-2/3
-    bg-blue-600 rounded-full px-4 ">
-    Map Links!
-  </h1>
-</div>
-
-<div class="px-4 py-4 text-2xl text-left font-bold ">
-
-  <div class="py-2 ">
-    <a href="https://goo.gl/maps/2iVvaS7ijSJ1Gj9P6" target="_blank"
-      rel="noopener" class="px-4 text-center text-4xl font-bold border-white
-      border-2 w-1/4 bg-blue-600  rounded-full px-4 ">
-      Google maps
-    </a>
+  <div>
+    <p>
+      Email us at
+      <a href="email:lesautotech651@outlook.com">lesautotech651@outlook.com</a>
+    </p>
   </div>
 
-
-  <div class="py-2 ">
-    <a href="https://www.waze.com/ul?ll=44.95557430%2C-93.11981630&navigate=yes"
-      target="_blank" rel="noopener" class="px-4 text-center text-4xl font-bold
-      border-white border-2 w-1/4 bg-blue-600 rounded-full px-4">
-      Waze maps
-    </a>
-  </div>
-
-
-  <div class="py-2 ">
-    <a href="http://mapq.st/2ifQJ6T" target="_blank" rel="noopener"
-      class="px-4 text-center text-4xl font-bold border-white border-2 w-1/4
-      bg-blue-600 rounded-full px-2">
-      Mapquest?
-    </a>
-
-    <p>I know right! who knew they were still around!</p>
+  <div class="flex flex-col items-center py-6">
+    <CommentForm @submitComment={{this.submitComment}}
+      @errorMessages={{this.errorMessages}}
+      @comment={{this.model}} />
   </div>
 </div>
-

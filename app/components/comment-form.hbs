@@ -1,0 +1,10 @@
+<FormCard @formDidSubmit={{@submitComment}}>
+  <InlineInput @id="name" @label="Name" @placeholder="Name" @type="text"
+    @value={{@comment.name}} />
+  <InlineInput @id="email" @label="E-mail" @placeholder="bob@example.co" @type="email"
+    @value={{@comment.email}} />
+  <InlineInput @id="phone" @label="Tel" @placeholder="555-555-5555" @type="tel"
+    @value={{@comment.phone}} />
+  <InlineInput @id="fax" @label="Fax" @placeholder="555-555-5555" @type="tel"
+    @value={{@comment.fax}} />
+</FormCard>
