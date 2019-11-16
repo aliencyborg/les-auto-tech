@@ -7,9 +7,5 @@ export default class ApplicationController extends Controller {
     return new Date().getFullYear()
   }
 
-  getCurrentYear() {
-    return new Date().getFullYear()
-  }
-
-  years = this.getCurrentYear() - this.originalYear
+  years = this.currentYear - this.originalYear
 }
