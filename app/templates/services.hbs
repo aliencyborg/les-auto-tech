@@ -1,53 +1,64 @@
-<div class="bg-local">
-  <h1 class="font-ariel font-bold text-blue-700 text-3xl px-4 py-2">
-    Specializing in Japanese automobiles
-  </h1>
+<div class="flex flex-col">
+  <div class="font-serif text-center text-deep-blue pt-3">
+    <h1 class="text-3xl lg:text-4xl xl:text-5xl">AUTO SERVICES</h1>
+    <h2 class="text-xl lg:text-2xl xl:text-3xl">Cost saving. Convenience.</h2>
+  </div>
 
-  <h2 class="font-sans text-lg lg:text-2xl px-4">
-    We fix Everything Auto related. Bumper to bumper. Foreign and Domestic. We
-    use superior diagnostic equipment that takes the guess work out of your
-    vehicle problems.
-  </h2>
+  <div class="py-3 text-red-700 font-bold font-mono italic text-center text-xs
+    sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+    ** Specializing in Japanese automobiles **
+  </div>
 
-  <ul class="px-12 list-disc text-xl">
-    <li>Fast, same-day service for most vehicles repairs</li>
-    <li>Clean and efficient shop.</li>
-    <li>Clean waiting area with television</li>
-  </ul>
-</div>
+  <div class="font-sans text-lg lg:text-2xl px-4">
+    <b>We fix everything auto related.</b> Bumper to bumper. Foreign and
+    domestic. We use superior diagnostic equipment that takes the guess work out
+    of your vehicle problems.
+  </div>
 
-<div class="py-1 px-4" >
-  <div class="flex flex-col lg:flex-row mx-2">
-    <div class="lg:w-1/3 px-4">
-      <ServiceDropdown @serviceName="Undercarriage">
+  <div class="bg-yellow-200 mt-4 mx-auto p-2 max-w-lg">
+    <ul class="text-sm sm:text-base lg:text-xl">
+      <li>Fast, same-day service for most vehicles repairs.</li>
+      <li>Clean and efficient shop.</li>
+      <li>Clean waiting area with television.</li>
+    </ul>
+  </div>
+
+  <div class="flex flex-col lg:flex-row mx-2 mb-8 lg:mt-6 text-sm xl:text-base">
+    <div class="w-full sm:w-2/3 lg:w-1/3 px-4 my-6 lg:my-0 mx-auto">
+      <ServiceDropdown @serviceName="Assistance">
         <ul class="list-disc">
-          <li>Steering</li>
-          <li>Suspension</li>
-          <li>Exhaust</li>
-          <li>Axels, bearings</li>
-          <li>Brakes</li>
-          <li>Tires and Wheels</li>
+          <li>Routine Maintenance</li>
+          <li>Oil Change</li>
+          <li>Warranties w/ Road-Side</li>
+          <li>Nationwide Warranty</li>
+          <li>Interstate Batteries Reference</li>
+          <li>Towing</li>
         </ul>
       </ServiceDropdown>
     </div>
 
-    <div class="lg:w-1/3 px-4">
-      <ServiceDropdown @serviceName="Under the hood">
+    <div class="w-full sm:w-2/3 lg:w-1/3 px-4 mb-6 mx-auto">
+      <ServiceDropdown @serviceName="Vehicle Service & Repair">
         <ul class="list-disc">
-          <li>Engine transmission</li>
-          <li>Belts</li>
-          <li>Starters, Altenators, and Batteries</li>
-          <li>Electrical</li>
+          <li>Cooling System Maintenance</li>
+          <li>Brake Repair</li>
+          <li>Engine diagnosic repairs</li>
+          <li>Heating &amp; Air conditioning Service</li>
+          <li>Steering &amp; Suspension</li>
+          <li>Wheel balancing</li>
+          <li>Tires</li>
+          <li>Glass</li>
+          <li>Tint</li>
         </ul>
       </ServiceDropdown>
     </div>
 
-    <div class="lg:w-1/3 px-4">
-      <ServiceDropdown @serviceName="Interior" >
+    <div class="w-full sm:w-2/3 lg:w-1/3 px-4 mx-auto">
+      <ServiceDropdown @serviceName="Inspections">
         <ul class="list-disc">
-          <li>Heating, and Air conditioning</li>
-          <li>Electrical</li>
-          <li>Upholstery????</li>
+          <li>Safety</li>
+          <li>Pre-Purchase</li>
+          <li>Emissions</li>
         </ul>
       </ServiceDropdown>
     </div>

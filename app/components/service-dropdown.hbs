@@ -1,7 +1,11 @@
-<button {{on 'mouseenter' this.showDropdown}} {{on 'mouseleave' this.hideDropdown}}
-    class="block h-12 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full border-2">
-    {{this.args.serviceName}}
+<button {{on "mouseenter" this.showDropdown}}
+  {{on "mouseleave" this.hideDropdown}} {{on "click" this.toggleDropdown}}
+  class="w-full hover:bg-blue-700 text-white font-bold py-2 px-4
+    border-2 border-red-300 {{this.buttonClass}}">
+  {{this.args.serviceName}}
 </button>
-<div class="w-2/3 bg-blue-300 hover:bg-blue 600 rounded-lg px-4 shadow-xl {{this.hiddenClass}}">
+<div class="bg-yellow-200 px-4 border-2 border-t-0
+  flex-flex-col justify-center mb-3
+  {{this.hiddenClass}}">
   {{yield}}
 </div>
