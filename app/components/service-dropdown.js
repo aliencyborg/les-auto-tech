@@ -1,5 +1,6 @@
 import Component from '@glimmer/component'
 import { action } from '@ember/object'
+import { debounce } from '@ember/runloop'
 import { tracked } from '@glimmer/tracking'
 
 export default class ServiceDropdownComponent extends Component {
@@ -18,9 +19,9 @@ export default class ServiceDropdownComponent extends Component {
 
   @action toggleDropdown() {
     if (this.hiddenClass === '') {
-      this.hideDropdown()
+      debounce(this.hideDropdown, 150)
     } else {
-      this.showDropdown()
+      debounce(this.showDropdown, 150)
     }
   }
 }
