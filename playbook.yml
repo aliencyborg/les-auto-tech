@@ -41,6 +41,7 @@
         name: les-auto-tech-stage
         state: started
         env:
+          HSTS: 'off'
           LETSENCRYPT_HOST: 'lat.aliencyb.org'
           PORT: '80'
           VIRTUAL_HOST: 'lat.aliencyb.org'
@@ -76,6 +77,7 @@
         name: les-auto-tech
         state: started
         env:
+          HSTS: 'off'
           LETSENCRYPT_HOST: 'lesautotech.com,www.lesautotech.com'
           PORT: '80'
           VIRTUAL_HOST: 'lesautotech.com,www.lesautotech.com'
