@@ -39,6 +39,7 @@
         expose: 80
         image: les-auto-tech:stage
         name: les-auto-tech-stage
+        restart_policy: always
         state: started
         env:
           HSTS: 'off'
